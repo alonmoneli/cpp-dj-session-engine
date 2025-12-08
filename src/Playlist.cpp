@@ -44,30 +44,24 @@ void Playlist::add_track(AudioTrack* track) {
 void Playlist::remove_track(const std::string& title) {
     PlaylistNode* current = head;
     PlaylistNode* prev = nullptr;
-
-    // Find the track to remove
     while (current && current->track->get_title() != title) {
         prev = current;
         current = current->next;
     }
-
     if (current) {
-        // Remove from linked list
         if (prev) {
             prev->next = current->next;
         } else {
             head = current->next;
         }
-
         track_count--;
         std::cout << "Removed '" << title << "' from playlist" << std::endl;
-
-    } else {
+        delete current->track;
+        delete current;
+    } 
+    else {
         std::cout << "Track '" << title << "' not found in playlist" << std::endl;
     }
-    delete current->track;
-    delete current;
-
 }
 
 void Playlist::display() const {

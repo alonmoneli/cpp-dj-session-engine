@@ -3,7 +3,7 @@
 
 #include <utility>
 #include <iostream>
-
+#include <stdexcept>
 /**
  * PointerWrapper - A template class that wraps a raw pointer
  * 
@@ -78,7 +78,6 @@ public:
             other.ptr = nullptr;
         }
         return *this;
-        return *this;
     }
 
     // ========== ACCESS OPERATIONS ==========
@@ -118,7 +117,7 @@ public:
         if (!ptr) {
             throw std::runtime_error("[ERROR] Dereferencing null PointerWrapper");
         }
-        return nullptr;
+        return ptr;
     }
 
     // ========== OWNERSHIP MANAGEMENT ==========

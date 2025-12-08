@@ -41,10 +41,12 @@ AudioTrack::~AudioTrack() {
     waveform_data = nullptr;
 }
 
-AudioTrack::AudioTrack(const AudioTrack& other): title(other.title), 
+AudioTrack::AudioTrack(const AudioTrack& other):
+title(other.title), 
 artists(other.artists), 
 duration_seconds(other.duration_seconds),
 bpm(other.bpm),
+waveform_data(nullptr),
 waveform_size(other.waveform_size)
 {
     // TODO: Implement the copy constructor
