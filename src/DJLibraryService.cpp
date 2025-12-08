@@ -8,14 +8,29 @@
 
 
 DJLibraryService::DJLibraryService(const Playlist& playlist) 
-    : playlist(playlist), library() {}
+    : playlist(playlist.get_name()), library() {} //Check later if this was indeed alowed to be altered.
 /**
  * @brief Load a playlist from track indices referencing the library
  * @param library_tracks Vector of track info from config
  */
 void DJLibraryService::buildLibrary(const std::vector<SessionConfig::TrackInfo>& library_tracks) {
     //Todo: Implement buildLibrary method
-    std::cout << "TODO: Implement DJLibraryService::buildLibrary method\n"<< library_tracks.size() << " tracks to be loaded into library.\n";
+    for (const auto& track_info : library_tracks) {
+        AudioTrack* new_track = nullptr;
+        if (track_info.type == "MP3") {
+            bool has_tags = (track_info.extra_param2 != 0);
+            new_track = new MP3Track(track_info.title, track_info.artists, track_info.duration_seconds, track_info.bpm, track_info.extra_param1, has_tags);
+            std::cout << "MP3Track created: " << track_info.extra_param1 << " kbps" << std::endl;
+        }
+        else if (track_info.type == "WAV") {
+            new_track = new WAVTrack(track_info.title, track_info.artists, track_info.duration_seconds, track_info.bpm, track_info.extra_param1, track_info.extra_param2);
+            std::cout << "WAVTrack created: " << track_info.extra_param1 << "Hz/" << track_info.extra_param2 << "bit" << std::endl;
+        }
+        if (new_track) {
+            library.push_back(new_track);
+        }
+    }
+    std::cout << "[INFO] Track library built: " << library.size() << " tracks loaded" << std::endl;
 }
 
 /**
@@ -60,6 +75,13 @@ AudioTrack* DJLibraryService::findTrack(const std::string& track_title) {
 void DJLibraryService::loadPlaylistFromIndices(const std::string& playlist_name, 
                                                const std::vector<int>& track_indices) {
     // Your implementation here
+    std::cout << "[INFO] Loading playlist: " << playlist_name << std::endl;
+    this->playlist.~Playlist();
+    
+    int count = 0;
+    for (int index : track_indices) {
+    }
+    std::cout << "[INFO] Playlist loaded: " << playlist_name << " (" << count << " tracks)" << std::endl;
     // For now, add a placeholder to fix the linker error
     (void)playlist_name;  // Suppress unused parameter warning
     (void)track_indices;  // Suppress unused parameter warning

@@ -85,7 +85,6 @@ public:
      * Get all tracks as a vector
      */
     std::vector<AudioTrack*> getTracks() const;
-
 };
 
 
