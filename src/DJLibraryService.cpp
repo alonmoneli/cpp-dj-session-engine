@@ -101,7 +101,7 @@ void DJLibraryService::loadPlaylistFromIndices(const std::string& playlist_name,
         AudioTrack* raw_track = cloned_wrapper.release();
         playlist.add_track(raw_track);
         count++;
-        std::cout << "Added '" << raw_track->get_title() << "' to playlist '" << playlist_name << "'" << std::endl;
+        //std::cout << "Added '" << raw_track->get_title() << "' to playlist '" << playlist_name << "'" << std::endl;
     }
     std::cout << "[INFO] Playlist loaded: " << playlist_name << " (" << count << " tracks)" << std::endl;
 }

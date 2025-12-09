@@ -177,6 +177,7 @@ int main(int argc, char* argv[]) {
         std::cout << "\n============= RUNNING INTERACTIVE SOFTWARE =============" << std::endl;
         DJSession live_session("Interactive Session", play_all);
         live_session.simulate_dj_performance();
+        std::cout << "Session cancelled by user or all playlists played." << std::endl;
         std::cout << "============= INTERACTIVE SESSION ENDED =============\n" << std::endl;
     } else {
         std::cout << "==================================================" << std::endl;

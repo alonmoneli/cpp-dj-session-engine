@@ -30,23 +30,20 @@ Created playlist: progressive_house
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
-Added 'Silence' to playlist 'progressive_house'
+ → Estimated beats: 840  → Compression precision factor: 0.6
 Added 'Silence' to playlist 'progressive_house'
 [WAVTrack::load] Loading WAV: "For An Angel" at 96000Hz/24bit (uncompressed)...
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
-Added 'For An Angel' to playlist 'progressive_house'
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 Added 'For An Angel' to playlist 'progressive_house'
 [MP3Track::load] Loading MP3: "9PM (Till I Come)" at 320 kbps...
   → Processing ID3 metadata (artist info, album art, etc.)...
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "9PM (Till I Come)"
- → Estimated beats: 750 → Compression precision factor: 1
-Added '9PM (Till I Come)' to playlist 'progressive_house'
+ → Estimated beats: 750  → Compression precision factor: 1
 Added '9PM (Till I Come)' to playlist 'progressive_house'
 [INFO] Playlist loaded: progressive_house (3 tracks)
 
@@ -57,7 +54,7 @@ Added '9PM (Till I Come)' to playlist 'progressive_house'
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
+ → Estimated beats: 840  → Compression precision factor: 0.6
 
 === Cache Status ===
 [LRUCache] Status: 1/3 slots used
@@ -74,7 +71,7 @@ Added '9PM (Till I Come)' to playlist 'progressive_house'
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
+ → Estimated beats: 840  → Compression precision factor: 0.6
 [Load Complete] 'Silence' is now loaded on deck 0
 [Active Deck] Switched to deck 0
 
@@ -90,7 +87,7 @@ Active Deck: 0
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 
 === Cache Status ===
 [LRUCache] Status: 2/3 slots used
@@ -106,7 +103,7 @@ Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 [Load Complete] 'For An Angel' is now loaded on deck 1
 [Active Deck] Switched to deck 1
 
@@ -123,7 +120,7 @@ Active Deck: 1
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "9PM (Till I Come)"
- → Estimated beats: 750 → Compression precision factor: 1
+ → Estimated beats: 750  → Compression precision factor: 1
 
 === Cache Status ===
 [LRUCache] Status: 3/3 slots used
@@ -140,7 +137,7 @@ Active Deck: 1
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "9PM (Till I Come)"
- → Estimated beats: 750 → Compression precision factor: 1
+ → Estimated beats: 750  → Compression precision factor: 1
 [Load Complete] '9PM (Till I Come)' is now loaded on deck 0
 [Active Deck] Switched to deck 0
 
@@ -169,38 +166,33 @@ Created playlist: test_playlist
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
-Added 'Silence' to playlist 'test_playlist'
+ → Estimated beats: 840  → Compression precision factor: 0.6
 Added 'Silence' to playlist 'test_playlist'
 [WAVTrack::load] Loading WAV: "For An Angel" at 96000Hz/24bit (uncompressed)...
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
-Added 'For An Angel' to playlist 'test_playlist'
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 Added 'For An Angel' to playlist 'test_playlist'
 [MP3Track::load] Loading MP3: "9PM (Till I Come)" at 320 kbps...
   → Processing ID3 metadata (artist info, album art, etc.)...
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "9PM (Till I Come)"
- → Estimated beats: 750 → Compression precision factor: 1
-Added '9PM (Till I Come)' to playlist 'test_playlist'
+ → Estimated beats: 750  → Compression precision factor: 1
 Added '9PM (Till I Come)' to playlist 'test_playlist'
 [MP3Track::load] Loading MP3: "Silence" at 192 kbps...
   → Processing ID3 metadata (artist info, album art, etc.)...
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
-Added 'Silence' to playlist 'test_playlist'
+ → Estimated beats: 840  → Compression precision factor: 0.6
 Added 'Silence' to playlist 'test_playlist'
 [WAVTrack::load] Loading WAV: "For An Angel" at 96000Hz/24bit (uncompressed)...
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
-Added 'For An Angel' to playlist 'test_playlist'
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 Added 'For An Angel' to playlist 'test_playlist'
 [INFO] Playlist loaded: test_playlist (5 tracks)
 
@@ -222,7 +214,7 @@ Added 'For An Angel' to playlist 'test_playlist'
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
+ → Estimated beats: 840  → Compression precision factor: 0.6
 [Sync BPM] Syncing BPM from 140 to 132
 [Load Complete] 'Silence' is now loaded on deck 1
 [Active Deck] Switched to deck 1
@@ -250,7 +242,7 @@ Active Deck: 1
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 [Load Complete] 'For An Angel' is now loaded on deck 0
 [Active Deck] Switched to deck 0
 
@@ -278,7 +270,7 @@ Active Deck: 0
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "9PM (Till I Come)"
- → Estimated beats: 750 → Compression precision factor: 1
+ → Estimated beats: 750  → Compression precision factor: 1
 [Load Complete] '9PM (Till I Come)' is now loaded on deck 1
 [Active Deck] Switched to deck 1
 
@@ -306,7 +298,7 @@ Active Deck: 1
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
+ → Estimated beats: 840  → Compression precision factor: 0.6
 [Sync BPM] Syncing BPM from 140 to 132
 [Load Complete] 'Silence' is now loaded on deck 0
 [Active Deck] Switched to deck 0
@@ -334,7 +326,7 @@ Active Deck: 0
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 [Load Complete] 'For An Angel' is now loaded on deck 1
 [Active Deck] Switched to deck 1
 
@@ -362,16 +354,14 @@ Created playlist: trance_classics
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
-Added 'For An Angel' to playlist 'trance_classics'
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 Added 'For An Angel' to playlist 'trance_classics'
 [MP3Track::load] Loading MP3: "Silence" at 192 kbps...
   → Processing ID3 metadata (artist info, album art, etc.)...
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
-Added 'Silence' to playlist 'trance_classics'
+ → Estimated beats: 840  → Compression precision factor: 0.6
 Added 'Silence' to playlist 'trance_classics'
 [INFO] Playlist loaded: trance_classics (2 tracks)
 
@@ -392,7 +382,7 @@ Added 'Silence' to playlist 'trance_classics'
   → Estimated file size: 241920000 bytes
   → Fast loading due to uncompressed format.
 [WAVTrack::analyze_beatgrid] Analyzing beat grid for: "For An Angel"
-Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
+ → Estimated beats: 945  → Precision factor: 1 (uncompressed audio)
 [Load Complete] 'For An Angel' is now loaded on deck 0
 [Active Deck] Switched to deck 0
 
@@ -420,7 +410,7 @@ Active Deck: 0
   → Decoding MP3 frames...
   → Load complete.
 [MP3Track::analyze_beatgrid] Analyzing beat grid for: "Silence"
- → Estimated beats: 840 → Compression precision factor: 0.6
+ → Estimated beats: 840  → Compression precision factor: 0.6
 [Load Complete] 'Silence' is now loaded on deck 1
 [Active Deck] Switched to deck 1
 
@@ -441,7 +431,8 @@ Deck B loads: 5
 Transitions: 10
 Errors: 0
 === Session Complete ===
+Session cancelled by user or all playlists played.
 ============= INTERACTIVE SESSION ENDED =============
 
 Shutting down DJ Session System: Interactive Session
-[MixingEngineService] Cleaning up decks....
+[MixingEngineService] Cleaning up decks...

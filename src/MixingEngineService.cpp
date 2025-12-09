@@ -21,7 +21,7 @@ MixingEngineService::MixingEngineService()
  * TODO: Implement MixingEngineService destructor
  */
 MixingEngineService::~MixingEngineService() {
-    std::cout << "[MixingEngineService] Cleaning up decks...." << std::endl;
+    std::cout << "[MixingEngineService] Cleaning up decks..." << std::endl;
     for(int i = 0; i < 2; ++i){
         if(decks[i]){
             delete decks[i];
@@ -52,6 +52,15 @@ int MixingEngineService::loadTrackToDeck(const AudioTrack& track) {
         target = 1 - active_deck;
     }
     std::cout << "[Deck Switch] Target deck: " << target << std::endl;
+
+    // --- LEAK FIX START ---
+    // If there is already a track on the target deck, delete it first!
+    if (decks[target] != nullptr) {
+        delete decks[target];
+        decks[target] = nullptr;
+    }
+    // --- LEAK FIX END ---
+
     cloned_wrapper->load();
     cloned_wrapper->analyze_beatgrid();
     if (!is_first_track && decks[active_deck] != nullptr && auto_sync) { 
@@ -112,10 +121,14 @@ bool MixingEngineService::can_mix_tracks(const PointerWrapper<AudioTrack>& track
  */
 void MixingEngineService::sync_bpm(const PointerWrapper<AudioTrack>& track) const {
     // Your implementation here
-    if (!decks[active_deck] || !track) return;
-    int current_bpm = decks[active_deck]->get_bpm();
-    int original_bpm = track->get_bpm();
-    int avg_bpm = (current_bpm + original_bpm) / 2;
-    std::cout << "[Sync BPM] Syncing BPM from " << original_bpm << " to " << avg_bpm << std::endl;
-    track->set_bpm(avg_bpm);
+    if (decks[active_deck] != nullptr && track){
+        int current_bpm = decks[active_deck]->get_bpm();
+        int original_bpm = track->get_bpm();
+        int avg_bpm = (current_bpm + original_bpm) / 2;
+        std::cout << "[Sync BPM] Syncing BPM from " << original_bpm << " to " << avg_bpm << std::endl;
+        track->set_bpm(avg_bpm);
+    }
+    else {
+        std::cout << "[Sync BPM] Cannot sync - one of the decks is empty." << std::endl;
+    }
 }
