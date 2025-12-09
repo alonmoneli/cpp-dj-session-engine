@@ -46,6 +46,7 @@ bool DJSession::load_playlist(const std::string& playlist_name)  {
     }
     
     track_titles = library_service.getTrackTitles();
+    std::reverse(track_titles.begin(), track_titles.end());
     return true;
 }
 
@@ -161,9 +162,7 @@ void DJSession::simulate_dj_performance() {
     std::cout << "\n--- Processing Tracks ---" << std::endl;
 
     // Your implementation here
-    auto reset_stats = [this]() {
-        stats = {};
-    };
+
     auto process_playlist = [this](const std::string& playlist_name) {
         if (!load_playlist(playlist_name)) {
             std::cerr << "[ERROR] Failed to load playlist '" << playlist_name << "'" << std::endl;
@@ -172,13 +171,13 @@ void DJSession::simulate_dj_performance() {
         }
 
         for (const auto& title : track_titles) {
-            std::cout << "\n-- Processing: " << title << " --" << std::endl;
+            std::cout << "\n--- Processing: " << title << " ---" << std::endl;
             ++stats.tracks_processed;
 
             load_track_to_controller(title);
-            if (!load_track_to_mixer_deck(title)) {
-                continue; // error already counted/logged
-            }
+            controller_service.displayCacheStatus();
+            load_track_to_mixer_deck(title);
+            mixing_service.displayDeckStatus();
         }
     };
     if (play_all) {
@@ -191,7 +190,6 @@ void DJSession::simulate_dj_performance() {
         for (const auto& name : names) {
             process_playlist(name);
             print_session_summary();
-            reset_stats();
         }
     } else {
         while (true) {
@@ -201,7 +199,6 @@ void DJSession::simulate_dj_performance() {
             }
             process_playlist(selected);
             print_session_summary();
-            reset_stats();
         }
         std::cout << "Session cancelled by user or completed selected playlists." << std::endl;
     }

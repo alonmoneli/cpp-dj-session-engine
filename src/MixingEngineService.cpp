@@ -52,10 +52,6 @@ int MixingEngineService::loadTrackToDeck(const AudioTrack& track) {
         target = 1 - active_deck;
     }
     std::cout << "[Deck Switch] Target deck: " << target << std::endl;
-    if (decks[target] != nullptr) {
-        delete decks[target];
-        decks[target] = nullptr;
-    }
     cloned_wrapper->load();
     cloned_wrapper->analyze_beatgrid();
     if (!is_first_track && decks[active_deck] != nullptr && auto_sync) { 
@@ -65,12 +61,6 @@ int MixingEngineService::loadTrackToDeck(const AudioTrack& track) {
     }
     decks[target] = cloned_wrapper.release();
     std::cout << "[Load Complete] '" << decks[target]->get_title() << "' is now loaded on deck " << target << std::endl;
-    if (!is_first_track && decks[active_deck] != nullptr) {
-        std::cout << "[Unload] Unloading previous deck " << active_deck 
-                  << " (" << decks[active_deck]->get_title() << ")" << std::endl;
-        delete decks[active_deck];
-        decks[active_deck] = nullptr;
-    }
     active_deck = target;
     std::cout << "[Active Deck] Switched to deck " << target << std::endl;
     return target;
