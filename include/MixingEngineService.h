@@ -19,7 +19,7 @@ public:
     MixingEngineService();
     ~MixingEngineService();
 
-    // We added this.
+    // We added this - rule of 3 implementation
     MixingEngineService(const MixingEngineService&) = delete;
     MixingEngineService& operator=(const MixingEngineService&) = delete;
 

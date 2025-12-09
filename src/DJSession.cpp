@@ -195,7 +195,7 @@ void DJSession::simulate_dj_performance() {
         while (true) {
             std::string selected = display_playlist_menu_from_config();
             if (selected.empty()) {
-                break; // user cancelled
+                break; 
             }
             process_playlist(selected);
             print_session_summary();
