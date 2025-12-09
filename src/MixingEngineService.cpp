@@ -52,15 +52,10 @@ int MixingEngineService::loadTrackToDeck(const AudioTrack& track) {
         target = 1 - active_deck;
     }
     std::cout << "[Deck Switch] Target deck: " << target << std::endl;
-
-    // --- LEAK FIX START ---
-    // If there is already a track on the target deck, delete it first!
     if (decks[target] != nullptr) {
         delete decks[target];
         decks[target] = nullptr;
     }
-    // --- LEAK FIX END ---
-
     cloned_wrapper->load();
     cloned_wrapper->analyze_beatgrid();
     if (!is_first_track && decks[active_deck] != nullptr && auto_sync) { 
