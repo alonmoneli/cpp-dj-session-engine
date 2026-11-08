@@ -2,7 +2,6 @@
 #include <memory>
 #include <vector>
 
-// Include all our classes
 #include "AudioTrack.h"
 #include "MP3Track.h"
 #include "WAVTrack.h"
@@ -13,15 +12,6 @@
 #include "DJControllerService.h"
 #include "MixingEngineService.h"
 #include "PointerWrapper.h"
-/**
- * DJ Track Session Manager - Test Program
- * 
- * This program demonstrates the assignment and tests student implementations.
- * As students complete each phase, more functionality will work correctly.
- * 
- * ⚠️  EXPECT MEMORY LEAKS AND CRASHES INITIALLY! ⚠️
- * Students must fix the issues to make this program run cleanly.
- */
 
 bool del = false; // hint: what is the purpose of this variable? how it changes the ownership semantics?
 void test_phase_1_memory_leaks() {
