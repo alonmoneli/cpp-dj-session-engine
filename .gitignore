@@ -1,0 +1,11 @@
+# Compiled output
+/bin/*
+!/bin/dj_config.txt
+*.o
+
+# Local logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
